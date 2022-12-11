@@ -1,0 +1,43 @@
+.wrap {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 3px solid palevioletred;
+    border-radius: 10px;
+}
+
+h1, h5 {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: rgb(88, 62, 62);
+}
+
+.input-group {
+    margin: 20px auto;
+}
+
+.mb-3 {
+    max-width: 400px;
+    margin: 15px auto;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    height: 60px;
+    margin: 10px auto;
+    padding: 10px;
+    
+}
+
+#errorMessage {
+    text-align: center;
+    color: red;
+}
+
+#entrance {
+    font-size: 22px;
+    text-align: center;
+    color: darkslategrey;
+}
