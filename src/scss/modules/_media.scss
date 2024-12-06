@@ -1,0 +1,9 @@
+@media (hover: hover) {
+  a:hover {
+    color: var(--hover-color);
+  }
+
+  .menu__phone:hover .icon-phone svg circle {
+    fill: var(--hover-color);
+  }
+}
