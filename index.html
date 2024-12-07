@@ -77,7 +77,38 @@
                   </ul>
                 </div>
               </div>
-              <div class="header-about__form"></div>
+              <div class="header-about__form">
+                <form action="#" class="feedback-form" method="post">
+                  <div class="form-title">ЗАКАЖИТЕ<br/>ОБРАТНЫЙ ЗВОНОК</div>
+                  <div class="form-item">
+                    <div class="form-group">
+                      <label for="name">Ваше имя *</label>
+                      <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Петров Петр" 
+                        required 
+                        class="form-input">
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Ваш номер *</label>
+                      <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="+7 (___) ___-__-__" 
+                        required 
+                        class="form-input">
+                    </div>
+                    <button type="submit" class="btn form-submit">Заказать звонок</button>
+                    <div class="form-footer">
+                      <span class="lock"></span>
+                      <p class="form-privacy">Мы гарантируем конфиденциальность данных</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
