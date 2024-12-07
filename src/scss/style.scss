@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -29,12 +29,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  border: 1px solid var(--hover-color);
+  border-radius: 10px;
+  border: 2px solid var(--scrollbar-color);
   background-color: var(--hover-color);
 
   &:hover {
-    background-color: var(--scrollbar-color);
+    border-color: var(--background-blue);
+    background-color: var(--background-blue-dark);
   }
 }
 
@@ -79,8 +80,7 @@ button:focus {
   @include background-image('/img/images/header-bg.png');
   position: relative;
   width: 100%;
-  // height: auto;
-  // height: 850px;
+  height: auto;
 
   &::before {
     @include pseudo-element('/img/images/header-mask.png');
@@ -88,9 +88,21 @@ button:focus {
 }
 
 .header-top {
-  position: relative;
-  @include flex-center-space-between;
+  position: sticky;
+  top: 0;
   padding: 54px 0 100px;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.header-top.scrolled {
+  background-color: var(--background-blue-dark);
+  padding-bottom: 54px;
+}
+
+
+.header-top__item {
+  @include flex-center-space-between;
 }
 
 .header-top__menu {
