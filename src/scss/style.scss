@@ -1,4 +1,4 @@
-// @import 'modern-normalize'; - подключен через npm
+// @import 'modern-normalize'; - подключен через npm в main.js
 @use './modules/fonts';
 @use './modules/vars';
 @use './modules/mixins' as *;
@@ -23,23 +23,23 @@ body {
 }
 
 body::-webkit-scrollbar {
-  background: var(--hover-color);
+  background: var(--background-blue-dark);
   width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid var(--background-blue);
   background-color: var(--scrollbar-color);
 
   &:hover {
-    border-color: var(--color-dark);
-    background-color: var(--background-blue-dark);
+    border-color: var(--scrollbar-color);
+    background-color: var(--hover-color);
   }
 }
 
 body::-webkit-scrollbar-corner {
-    display: none;
+  display: none;
 }
 
 *, 
@@ -77,14 +77,26 @@ button:focus {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.subtitle {
+  padding-top: 80px;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 100%;
+  text-align: center;
   
+  &.subtitle-black {
+    color: var(--color-black);
+  }
 }
 
 .header__wrapper {
   @include background-image('/img/images/header-bg.png');
   position: relative;
   width: 100%;
-  height: auto;
+  height: 850px;
 
   &::before {
     @include pseudo-element('/img/images/header-mask.png');
@@ -92,18 +104,20 @@ button:focus {
 }
 
 .header-top {
-  position: sticky;
-  top: 0;
+  position: relative;
   padding: 54px 0 100px;
-  z-index: 10;
-  transition: all 0.2s ease;
-}
+  transition: all 0.3s ease;
 
-.header-top.scrolled {
-  background-color: var(--background-blue-dark);
-  padding-bottom: 54px;
+  &.scrolled {
+    position: fixed;
+    width: 100%;
+    height: 190px;
+    top: 0;
+    left: 0;
+    background-color: var(--background-blue-dark);
+    z-index: 10;
+  }
 }
-
 
 .header-top__item {
   @include flex-center-space-between;
@@ -150,6 +164,10 @@ button:focus {
   flex-direction: row;
   align-items: start;
   gap: 50px;
+
+  &.scrolled {
+    padding-top: 190px;
+  }
 }
 
 .header-about__promo {
@@ -292,7 +310,101 @@ label {
   color: #c0c0c0;
 }
 
+.benefit__wrapper {
+  @include background-image('/img/images/benefit-bg.png');
+  position: relative;
+  width: 100%;
+  margin-top: -480px;
+  height: 1750px;
+  box-shadow: inset 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
 
+.benefit-span {
+  display: block;
+  width: 100%;
+  height: 480px;
+}
+
+.benefit__text {
+  padding: 25px 86px 46px;
+  font-family: var(--second-family);
+  font-size: 20px;
+  line-height: 109%;
+  text-align: center;
+  color: #030303;
+}
+
+.benefit__cards {
+  @include flex-center-space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-bottom: 130px;
+}
+
+.benefit__card-item {
+  position: relative;
+  @include flex-center-space-between;
+  flex-direction: column;
+  justify-content: start;
+  align-self: stretch;
+  max-width: 369px;
+  padding: 40px 30px 60px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 30px 0 rgba(9, 38, 192, 0.05);
+
+  &::before {
+    @include pseudo-element('/img/images/benefit-card-mask.png');
+  }
+}
+
+.benefit-icon {
+  width: 157px;
+  height: 162px;
+  margin-bottom: 40px;
+
+  &.quality {
+    @include background-image('/img/icons/quality.svg');
+  }
+
+  &.individual {
+    @include background-image('/img/icons/individual.svg');
+  }
+
+  &.delivery {
+    @include background-image('/img/icons/delivery.svg');
+  }
+
+  &.analogs {
+    @include background-image('/img/icons/analogs.svg');
+  }
+
+  &.reserve {
+    @include background-image('/img/icons/reserve.svg');
+  }
+
+  &.pay {
+    @include background-image('/img/icons/pay.svg');
+  }
+}
+
+.benefit__card-title {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 20px;
+  color: #2a336c;
+  padding-bottom: 14px;
+  text-align: center;
+}
+
+.benefit__card-text {
+  font-family: var(--second-family);
+  line-height: 110%;
+  text-align: center;
+  color: #555;
+}
 
 
 
