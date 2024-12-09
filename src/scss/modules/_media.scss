@@ -3,6 +3,10 @@
     color: var(--hover-color);
   }
 
+  .btn:hover {
+    color: var(--btn-hover);
+  }
+
   .menu__phone:hover .icon-phone svg circle {
     fill: var(--hover-color);
   }

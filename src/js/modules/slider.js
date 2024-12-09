@@ -16,7 +16,7 @@ export function initSlider() {
       const offset = direction === "next" ? -slideWidth : slideWidth;
 
       // Сдвигаем с анимацией
-      slider.style.transition = "transform 0.5s ease";
+      slider.style.transition = "transform 0.3s ease";
       slider.style.transform = `translateX(${offset}px)`;
 
       // Обработчик завершения анимации
