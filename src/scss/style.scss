@@ -556,15 +556,25 @@ label {
 }
 
 .scheme-card5 {
+  position: relative;
   @include background-image('/img/images/scheme-card5.png');
   width: 438px;
   padding-left: 58px;
+
+  &::before {
+    @include pseudo-element('/img/images/scheme-card-mask4.png');
+  }
 }
 
 .scheme-card6 {
+  position: relative;
   @include background-image('/img/images/scheme-card4.png');
   width: 436px;
   padding-left: 58px;
+
+  &::before {
+    @include pseudo-element('/img/images/scheme-card-mask4.png');
+  }
 }
 
 .grid-container {
@@ -591,7 +601,8 @@ label {
   font-weight: 700;
   font-size: 16px;
   line-height: 139%;
-  padding: 6px 0 22px 0;
+  padding-top: 4px;
+  height: 50px;
 }
 
 .item3 {
