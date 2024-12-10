@@ -14,7 +14,7 @@
             <div class="container">
               <div class="header-top__item">
                 <a class="header-top__logo" href="#">
-                <img src="./img/icons/logo.svg" alt="Logo" class="logo__icon">
+                <img src="/img/icons/logo.svg" alt="Logo" class="logo__icon">
                 </a>
                 <nav class="header-top__menu">
                   <button class="burger-menu" id="burger-toggle">
@@ -23,25 +23,25 @@
                   </button>
                   <ul class="menu__list">
                     <li>
-                      <a class="menu__link" href="">Каталог</a>
+                      <a class="menu__link" href="#">Каталог</a>
                     </li>
                     <li>
-                      <a class="menu__link" href="#">Производители</a>
+                      <a class="menu__link" href="#makers">Производители</a>
                     </li>
                     <li>
-                      <a class="menu__link" href="#">Для  кого мы работаем</a>
+                      <a class="menu__link" href="#scheme">Для  кого мы работаем</a>
                     </li>
                     <li>
-                      <a class="menu__link" href="">Сертификаты</a>
+                      <a class="menu__link" href="#">Сертификаты</a>
                     </li>
                     <li>
-                      <a class="menu__link" href="#">О нас</a>
+                      <a class="menu__link" href="#about">О нас</a>
                     </li>
                     <li>
-                      <a class="menu__link" href="#">FAQ</a>
+                      <a class="menu__link" href="#faq">FAQ</a>
                     </li>
                     <li>
-                      <a class="menu__link" href="#footer">Контакты</a>
+                      <a class="menu__link" href="#">Контакты</a>
                     </li>
                   </ul>
                 </nav>
@@ -116,7 +116,7 @@
     </header>
     <main>
       <div class="wrapper">
-        <section class="benefit">
+        <section class="benefit" id="about">
           <div class="benefit__wrapper">
             <div class="container">
               <span class="span-block benefit-span"></span>
@@ -159,7 +159,7 @@
         </section>
       </div>
       <div class="wrapper">
-        <section class="makers">
+        <section class="makers" id="makers">
           <div class="makers__wrapper">
             <div class="container">
               <div class="makers-item">
@@ -201,7 +201,7 @@
         </section>
       </div>
       <div class="wrapper">
-        <section class="scheme">
+        <section class="scheme" id="scheme">
           <div class="scheme__wrapper">
             <div class="container">
               <div class="scheme-item">
@@ -259,7 +259,7 @@
         </section>
       </div>
       <div class="wrapper">
-        <section class="faq">
+        <section class="faq" id="faq">
           <div class="faq__wrapper">
             <div class="container">
               <div class="faq-item">
@@ -335,8 +335,38 @@
         </section>
       </div>
     </main>
-
-    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-item">
+          <a class="footer__logo" href="#">
+            <img src="/img/images/logo.png" alt="Logo" class="logo__icon">
+          </a>
+          <nav class="footer__menu">
+            <ul class="menu__list">
+              <li>
+                <a class="menu__link-footer" href="#">Каталог</a>
+              </li>
+              <li>
+                <a class="menu__link-footer" href="#makers">Производители</a>
+              </li>
+              <li>
+                <a class="menu__link-footer" href="#scheme">Для  кого мы работаем</a>
+              </li>
+              <li>
+                <a class="menu__link-footer" href="#">Сертификаты</a>
+              </li>
+              <li>
+                <a class="menu__link-footer" href="#about">О нас</a>
+              </li>
+              <li>
+                <a class="menu__link-footer" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="submit" class="btn btn-footer form-application">ОСТАВИТЬ ЗАЯВКУ</button>
+        </div>
+      </div>
+    </footer>
     
     <script type="module" src="/src/js/main.js"></script>
   </body>

@@ -65,7 +65,6 @@ button:active,
 button:focus {
   border: none;
   background-image: none;
-  background-color: transparent;
   cursor: pointer;
 }
 
@@ -90,6 +89,16 @@ button:focus {
   &.subtitle-black {
     color: var(--color-black);
   }
+}
+
+#makers,
+#scheme,
+#faq {
+  scroll-margin-top: 130px;
+}
+
+#about {
+  scroll-margin-top: -300px;
 }
 
 .header__wrapper {
@@ -294,6 +303,11 @@ label {
   text-transform: uppercase;
   color: var(--color-white);
   transition: all 0.3s ease;
+
+  &:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(0, 0, 0, 0.2); 
+    transform: translateY(1px);
+  }
 }
 
 .form-footer {
@@ -463,6 +477,12 @@ label {
   height: 41px;
   cursor: pointer;
   pointer-events: auto;
+  background-color: inherit;
+  transition: all 0.2s ease;
+
+  &:active {
+    transform: translateY(-24%);
+  }
 }
 
 .prev {
@@ -722,7 +742,28 @@ details[open] .faq__arrow-open .icon-close {
   }
 }
 
+.footer {
+  background: var(--color-dark);
+}
 
+.footer-item {
+  @include flex-center-space-between;
+  padding: 72px 0 72px;
+  gap: 20px;
+}
+
+.menu__link-footer {
+  font-family: var(--second-family);
+  font-size: 16px;
+  line-height: 123%;
+}
+
+.btn-footer {
+  width: auto;
+  background: var(--hover-color);
+  padding: 18px 40px;
+  margin: 0;
+}
 
 
 
