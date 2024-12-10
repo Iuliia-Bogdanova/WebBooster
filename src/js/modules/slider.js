@@ -4,18 +4,17 @@ export function initSlider() {
     const prevBtn = document.querySelector(".prev");
     const nextBtn = document.querySelector(".next");
 
-    const slideWidth = 242; // Ширина одного слайда
+    const slideWidth = 242;
     let isMoving = false;
 
-    // Функция для перемещения слайдов
     const moveSlide = (direction) => {
       if (isMoving) return;
       isMoving = true;
 
-      // Определяем направление
+      // Определить направление
       const offset = direction === "next" ? -slideWidth : slideWidth;
 
-      // Сдвигаем с анимацией
+      // Сдвинуть с анимацией
       slider.style.transition = "transform 0.3s ease";
       slider.style.transform = `translateX(${offset}px)`;
 
@@ -23,30 +22,28 @@ export function initSlider() {
       slider.addEventListener(
         "transitionend",
         () => {
-          // Перемещаем слайды без анимации
           slider.style.transition = "none";
 
           if (direction === "next") {
-            // Перемещаем первый слайд в конец
+            // Переместить первый слайд в конец
             const firstSlide = slider.firstElementChild;
             slider.appendChild(firstSlide);
           } else {
-            // Перемещаем последний слайд в начало
+            // Переместить последний слайд в начало
             const lastSlide = slider.lastElementChild;
             slider.prepend(lastSlide);
           }
 
-          // Сбрасываем трансформацию
+          // Сбросить трансформацию
           slider.style.transform = `translateX(0)`;
 
-          // Завершаем движение
+          // Завершить движение
           isMoving = false;
         },
         { once: true }
       );
     };
 
-    // Обработчики событий для кнопок
     nextBtn.addEventListener("click", () => moveSlide("next"));
     prevBtn.addEventListener("click", () => moveSlide("prev"));
   });
