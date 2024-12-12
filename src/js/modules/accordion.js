@@ -1,21 +1,23 @@
 export function initSmoothOpening() {
-  document.querySelectorAll(".faq__card").forEach((card) => {
-    const textWrap = card.querySelector(".faq__text-wrap");
+  document.querySelectorAll(".faq__card, .menu__btn").forEach((card) => {
+    const content = card.querySelector(".faq__text-wrap, .menu__text-wrap");
 
-    // Инициализировать высоту
+    if (!content) return;
+
+    // Инициализация высоты при загрузке страницы
     if (card.open) {
-      textWrap.style.maxHeight = `${textWrap.scrollHeight}px`;
+      content.style.maxHeight = `${content.scrollHeight}px`;
+    } else {
+      content.style.maxHeight = "0";
     }
 
     card.addEventListener("toggle", () => {
       if (card.open) {
-        textWrap.style.maxHeight = `${textWrap.scrollHeight}px`;
+        content.style.maxHeight = `${content.scrollHeight}px`;
       } else {
-        textWrap.style.maxHeight = `${textWrap.scrollHeight}px`;
-
-        // Задержка для запуска анимации
+        content.style.maxHeight = `${content.scrollHeight}px`; // Установка текущей высоты
         requestAnimationFrame(() => {
-          textWrap.style.maxHeight = "0";
+          content.style.maxHeight = "0"; // Анимация закрытия
         });
       }
     });
