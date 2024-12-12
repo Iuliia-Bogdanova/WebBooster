@@ -110,7 +110,7 @@ summary {
   @include background-image("/img/images/header-bg.png");
   position: relative;
   width: 100%;
-  min-height: 850px;
+  max-height: 850px;
 
   &::before {
     @include pseudo-element("/img/images/header-mask.png");

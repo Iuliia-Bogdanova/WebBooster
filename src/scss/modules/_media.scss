@@ -31,6 +31,10 @@
     padding: 0 50px;
   }
 
+  .header-top {
+    padding-bottom: 80px;
+  }
+
   .header-top__item {
     align-items: start;
   }
@@ -69,16 +73,32 @@
   .menu-line:not(:last-child) {
     padding-bottom: 10px;
   }
+
+  .header-about__promo {
+    padding-bottom: 150px;
+  }
+
+  .promo__title {
+    font-size: 60px;
+      
+    .highlight-font {
+      font-size: 40px;
+    }
+
+    .smaller-font {
+      font-size: 50px;
+    }
+  }
 }
 
 @media (max-width: 1256px) {
   .header-top {
-  padding: 44px 0 80px;
+  // padding: 44px 0 70px;
 
-  &.scrolled {
-    height: 160px;
+    &.scrolled {
+      height: 150px;
+    }
   }
-}
 
   .footer-item {
     flex-direction: column;
@@ -87,10 +107,117 @@
   }
 }
 
+@media (max-width: 1180px) {
+  .promo__title {
+    font-size: 50px;
+      
+    .highlight-font {
+      font-size: 30px;
+    }
+
+    .smaller-font {
+      font-size: 40px;
+    }
+  }
+
+  .promo__subtitle {
+    font-size: 20px;
+  }
+
+  .form-title {
+    padding: 24px 0;
+    font-size: 20px;
+  }
+
+  .form-item {
+    padding: 20px 30px 30px;
+  }
+
+  label {
+    padding-left: 16px;
+    font-size: 16px;
+  }
+
+  .form-input {
+    padding: 16px 0 14px 16px;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  .btn.form-submit {
+    margin: 20px 0 14px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .btn {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+
+  .promo__title {
+    font-size: 40px;
+      
+    .highlight-font {
+      font-size: 26px;
+    }
+
+    .smaller-font {
+      font-size: 30px;
+    }
+  }
+
+  .promo__subtitle {
+    font-size: 18px;
+  }
+
+  .check-list {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 920px) {
+  .header__wrapper {
+    max-height: none;
+    min-height: 850px;
+  }
+
+  .header-about {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .header-about__promo {
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .header-about__form {
+    padding-bottom: 130px;
+  }
+}
+
 @media (max-width: 800px) {
   .container {
     padding: 0 30px;
   } 
+
+  .header-top {
+  padding-top: 30px;
+
+    &.scrolled {
+      height: 190px;
+    }
+  }
+
+  .header-top__logo {
+    margin-top: 30px;
+  }
 
   .contacts {
     align-items: end;
