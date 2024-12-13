@@ -1,4 +1,4 @@
-export function initSmoothOpening() {
+export function initAccordionOpening() {
   document.querySelectorAll(".faq__card, .menu__btn").forEach((card) => {
     const content = card.querySelector(".faq__text-wrap, .menu__text-wrap");
 
@@ -22,4 +22,16 @@ export function initSmoothOpening() {
       }
     });
   });
+
+  // Закрытие меню при клике на ссылку
+  const menuDetails = document.querySelector("details.menu__btn");
+
+  if (menuDetails) {
+    const menuLinks = menuDetails.querySelectorAll(".menu__link");
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuDetails.open = false;
+      });
+    });
+  }
 }

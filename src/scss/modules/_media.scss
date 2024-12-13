@@ -60,7 +60,7 @@
 
   .menu__text-wrap {
     position: relative;
-    padding: 20px 38px 26px;
+    padding: 20px 30px 26px 0;
     border-radius: 0 0 10px 10px;
     background-color: var(--background-blue-dark);
     text-align: end;
@@ -208,7 +208,7 @@
   } 
 
   .header-top {
-  padding-top: 30px;
+  padding: 40px 0 120px;
 
     &.scrolled {
       height: 190px;
@@ -216,7 +216,7 @@
   }
 
   .header-top__logo {
-    margin-top: 30px;
+    margin-top: 8px;
   }
 
   .contacts {
@@ -224,5 +224,40 @@
     flex-direction: column;
     gap: 20px;
   }
+}
+
+@media (max-width: 724px) {
+  .footer-item {
+    padding: 52px 0;
+    gap: 26px;
+  }
+  .menu__list {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 468px) {
+
+  .header-top {
+    padding: 30px 0 150px;
+    &.scrolled {
+      height: 230px;
+    }
+  }
+
+  .header-top__item {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contacts {
+    align-items: center;
+  }
+
+  .menu__btn {
+      margin-bottom: 30px;
+    }
 }
   
