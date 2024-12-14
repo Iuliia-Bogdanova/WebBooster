@@ -152,8 +152,6 @@
 
 @media (max-width: 1256px) {
   .header-top {
-  // padding: 44px 0 70px;
-
     &.scrolled {
       height: 150px;
     }
@@ -358,6 +356,10 @@
   .benefit__card-text {
     font-size: 16px;
   }
+
+  .subtitle-faq {
+    padding-top: 110px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -381,6 +383,23 @@
     align-items: end;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .faq__title {
+    padding: 26px 30px 26px 30px;
+  }
+
+  .faq__title-item {
+    font-size: 20px;
+  }
+
+  .faq__text-wrap {
+        padding: 30px;
+  }
+
+  .faq-text {
+    font-size: 16px;
+    padding-bottom: 20px;
   }
 }
 
@@ -438,6 +457,7 @@
 
   .header-top {
     padding: 30px 0 150px;
+    
     &.scrolled {
       height: 230px;
     }
@@ -472,6 +492,14 @@
 
   .scheme__cards {
     margin: 0 auto;
+  }
+
+  .subtitle-faq {
+    padding-top: 80px;
+  }
+
+  .faq__block {
+    padding-bottom: 70px;
   }
 }
   
